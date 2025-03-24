@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Bigin masalalar</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="139445dd-d1f9-80c0-a273-d843b47e08f9" class="page sans"><header><h1 class="page-title">Bigin masalalar</h1><p class="page-description"></p></header><div class="page-body"><p id="1ae445dd-d1f9-8048-a3df-de219a09f554" class="">    <strong>1.</strong> Kvadratning tomoni berilgan. Uning perimetrini aniqlang. P = 4 * a.   </p><div id="1ae445dd-d1f9-8061-8e2b-d2b94d157e5b" class="column-list"><div id="1ae445dd-d1f9-8055-8e41-d5b2a656425d" style="width:100%" class="column"><p id="1ae445dd-d1f9-80d6-b453-c93b4b4dd1b6" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-80da-aa38-e9d9ffb2685c"/><p id="1ae445dd-d1f9-802f-8a09-dd89b41c883b" class="">3</p><hr id="1ae445dd-d1f9-80c0-a961-d07cc2818657"/><p id="1ae445dd-d1f9-808d-8fac-de54325f32a1" class="">5</p><hr id="1ae445dd-d1f9-80fb-a86c-f2949281b01b"/><p id="1ae445dd-d1f9-80e9-86e7-f3d29875b292" class="">7</p><hr id="1ae445dd-d1f9-809a-b920-d0d8ed6055f0"/></div><div id="1ae445dd-d1f9-8037-b20d-edbd63fbfeca" style="width:100%" class="column"><p id="1ae445dd-d1f9-80cb-80c0-d075c0a6b9e9" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-8073-be49-dfde8b47a61c"/><p id="1ae445dd-d1f9-802a-95ae-c70f1bc0c6a8" class="">12</p><hr id="1ae445dd-d1f9-801d-bf35-f4540cd584ba"/><p id="1ae445dd-d1f9-8036-a25d-e6777551534d" class="">20</p><hr id="1ae445dd-d1f9-8008-85d2-f6ae4a97309d"/><p id="1ae445dd-d1f9-80a6-b610-f81be8250cb4" class="">28</p><hr id="1ae445dd-d1f9-8070-8c2f-f7382ad8e94e"/></div></div><p id="139445dd-d1f9-802b-b0cf-c680d603e4ff" class="">    <strong>2.</strong> Kvadratning tomoni berilgan. Uning yuzasi aniqlang. S = a*a.   </p><div id="1ae445dd-d1f9-806e-b2ad-c3d5b7613874" class="column-list"><div id="1ae445dd-d1f9-80e1-96a3-faf9e267932e" style="width:100%" class="column"><p id="1ae445dd-d1f9-8055-99e9-d2df5f0b5157" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-80aa-b714-d16b97070611"/><p id="1ae445dd-d1f9-80ae-840f-f620eb3ef3b2" class="">3</p><hr id="1ae445dd-d1f9-8026-ad56-e8e8adf3998a"/><p id="1ae445dd-d1f9-80d2-93fc-d5560852f3c6" class="">5</p><hr id="1ae445dd-d1f9-80eb-b6af-ca36883ea6a2"/><p id="1ae445dd-d1f9-80ac-9a5b-c9eb6da05425" class="">7</p><hr id="1ae445dd-d1f9-809b-acee-de29b1d4b941"/></div><div id="1ae445dd-d1f9-80e9-a874-c41874b6e408" style="width:100%" class="column"><p id="1ae445dd-d1f9-8077-90e5-cf90dc3a7a23" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-8096-94ef-dcb0e7cba0a5"/><p id="1ae445dd-d1f9-8067-9c81-e28546bfbf6a" class="">9</p><hr id="1ae445dd-d1f9-80b1-8f77-fe19857b24fd"/><p id="1ae445dd-d1f9-80a9-975d-fc2f02af54eb" class="">25</p><hr id="1ae445dd-d1f9-80ff-88de-e1c3fb36050d"/><p id="1ae445dd-d1f9-8063-83de-d7edcd568140" class="">49</p><hr id="1ae445dd-d1f9-8056-ae74-e503a25e736b"/></div></div><p id="139445dd-d1f9-80bf-bf05-c23beaf3808f" class=""><strong>3.</strong> To‘g‘ri to‘rtburchakning tomonlari a va b berilgan. Uning yuzasi va perimetrini aniqlang. S = a * b; P = 2 * (a + b)   </p><div id="1ae445dd-d1f9-80a7-9dab-ea780b9d274e" class="column-list"><div id="1ae445dd-d1f9-8003-998c-ce40472d15ca" style="width:100%" class="column"><p id="1ae445dd-d1f9-80e6-970e-f5bc961d5733" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-8053-b91a-f612dda8c899"/><p id="1ae445dd-d1f9-80d3-b4b2-f5a93982fbb7" class="">(3, 4)</p><hr id="1ae445dd-d1f9-8007-8d9c-f45438ae1a14"/><p id="1ae445dd-d1f9-80a5-947c-f4bf089f7081" class="">(5, 6)</p><hr id="1ae445dd-d1f9-8016-a884-e5bbd8e08693"/><p id="1ae445dd-d1f9-8084-9823-cb8efc44faf1" class="">(7, 8)</p><hr id="1ae445dd-d1f9-80fb-80d9-ee640559d457"/></div><div id="1ae445dd-d1f9-80d5-b5c4-e6a4f806d3c0" style="width:100%" class="column"><p id="1ae445dd-d1f9-806d-9463-ed1155ae910f" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-809a-b2a5-d1e806aae07b"/><p id="1ae445dd-d1f9-808e-9d15-c3a6b4369c4e" class="">S = 12, P = 14</p><hr id="1ae445dd-d1f9-8017-8214-e4448bae80c0"/><p id="1ae445dd-d1f9-80f1-b56e-cdf963fa6e04" class="">S = 30, P = 22</p><hr id="1ae445dd-d1f9-80f3-b80f-fcb060b614cc"/><p id="1ae445dd-d1f9-80f7-bfc2-f725a605cd54" class="">S = 56, P = 30</p><hr id="1ae445dd-d1f9-806c-9c86-d005cd75133e"/></div></div><p id="1ae445dd-d1f9-804d-b98a-e3b4a1615e12" class="">4. Aylananing diametri d berilgan. Uning uzunligi aniqlansin L = π * d; π = 3.14</p><div id="1ae445dd-d1f9-806a-93b0-fdbbf90d6b67" class="column-list"><div id="1ae445dd-d1f9-80b3-bab3-e2a5db6dbec4" style="width:50%" class="column"><p id="1ae445dd-d1f9-8015-af60-c27c1ed5b531" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-8019-bb66-c7a9d2c4b44d"/><p id="1ae445dd-d1f9-8067-8054-f7efbfcaebe6" class="">2</p><hr id="1ae445dd-d1f9-8003-abda-db84d506fbd5"/><p id="1ae445dd-d1f9-80b2-956d-f4c169e7e314" class="">4</p><hr id="1ae445dd-d1f9-808c-bd03-f6f1216130d9"/><p id="1ae445dd-d1f9-8014-8de9-c7a6b1925ccf" class="">6</p><hr id="1ae445dd-d1f9-800d-b77e-da69003ce15c"/></div><div id="1ae445dd-d1f9-808a-91b4-c11fb46f8485" style="width:50%" class="column"><p id="1ae445dd-d1f9-801b-a48e-d7b709e17250" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-80c3-92c3-cde8ee50c3ec"/><p id="1ae445dd-d1f9-8075-97f7-c2b89d0ee4fe" class="">6.28</p><hr id="1ae445dd-d1f9-804d-ab71-e10837fb966e"/><p id="1ae445dd-d1f9-80ad-8e50-d419a429a037" class="">12.56</p><hr id="1ae445dd-d1f9-80bf-a5ca-ce0254581b8b"/><p id="1ae445dd-d1f9-8036-9c10-f2c85c6fe988" class="">18.84</p><hr id="1ae445dd-d1f9-8019-a157-fba5125e8008"/></div></div><p id="1ae445dd-d1f9-804d-85f0-eb4e3fbedec7" class=""><strong>5.</strong> Kubning yon tomoni a berilgan. Uning hajmini va to‘la sirtini aniqlansin.   V = a^3;  S = 6 * a^2   </p><div id="1ae445dd-d1f9-8047-a207-c7b987e2cc13" class="column-list"><div id="1ae445dd-d1f9-80d2-a1e2-f0b3def3f2c1" style="width:100%" class="column"><p id="1ae445dd-d1f9-8068-a0d5-f581c8f0b1c9" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-8051-ad51-f543d56d8af0"/><p id="1ae445dd-d1f9-80cf-be90-c796c41c6b08" class="">2</p><hr id="1ae445dd-d1f9-80ee-80c3-e80e9c9df609"/><p id="1ae445dd-d1f9-80f6-b4e0-ce3dcc850a4c" class="">3</p><hr id="1ae445dd-d1f9-802b-a111-e9c5ec0be0bc"/><p id="1ae445dd-d1f9-807a-b0e6-d6548ea95f8d" class="">4</p><hr id="1ae445dd-d1f9-801f-8582-cea81430a1db"/></div><div id="1ae445dd-d1f9-808c-b504-c046af1ef327" style="width:100%" class="column"><p id="1ae445dd-d1f9-80b8-b742-f4df0f5ad81d" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-808c-a784-e8f23a712816"/><p id="1ae445dd-d1f9-804f-973e-dc8c9066461b" class="">V = 8, S = 24</p><hr id="1ae445dd-d1f9-80a4-9128-f91ae79d0540"/><p id="1ae445dd-d1f9-801a-acea-fe06fb33f396" class="">V = 27, S = 54</p><hr id="1ae445dd-d1f9-8009-ac03-eda65c180520"/><p id="1ae445dd-d1f9-8018-898b-ca548bda13fc" class="">V = 64, S = 96</p><hr id="1ae445dd-d1f9-8035-8544-d2cdf9a90936"/></div></div><p id="1ae445dd-d1f9-803b-8f9a-e45e2270414d" class="">6. Parallelepipedning tomonlari a, b, c berilgan. Uning hajmini va to‘la sirt aniqlansin. V = a * b * c; S = 2 * (a * b + b * c + a * c).</p><div id="1ae445dd-d1f9-801d-9ece-cd0d4ff30a5b" class="column-list"><div id="1ae445dd-d1f9-80bc-9020-d1139eb5e035" style="width:100%" class="column"><p id="1ae445dd-d1f9-8071-ad90-e8cb181755df" class=""><strong>Kirish:</strong></p><hr id="1ae445dd-d1f9-8001-aaf5-def7a390a454"/><p id="1ae445dd-d1f9-8032-bc1e-ee399c334d55" class="">(2, 3, 4)</p><hr id="1ae445dd-d1f9-807a-b79e-eefeb0b7a107"/><p id="1ae445dd-d1f9-8028-b5a2-c35dd8613a3c" class="">(3, 4, 5)</p><hr id="1ae445dd-d1f9-805a-9585-d585066fc42a"/><p id="1ae445dd-d1f9-806d-a3e0-cbd7c32cb7fd" class="">(4, 5, 6)</p><hr id="1ae445dd-d1f9-8064-92ca-f4a14db0cc08"/></div><div id="1ae445dd-d1f9-8050-aacc-d504b44c65a2" style="width:100%" class="column"><p id="1ae445dd-d1f9-8059-ad08-e2097f65630d" class=""><strong>Chiqish:</strong></p><hr id="1ae445dd-d1f9-80a5-9d5f-e3e732d5fc33"/><p id="1ae445dd-d1f9-808f-bde6-d47489b43a11" class="">V = 24, S = 52</p><hr id="1ae445dd-d1f9-806e-a00b-c54bf3881fdc"/><p id="1ae445dd-d1f9-801a-9a84-eaaa8465841f" class="">V = 60, S = 94</p><hr id="1ae445dd-d1f9-80f1-a283-c0b5aca3ef24"/><p id="1ae445dd-d1f9-806d-9146-cac9d7292e2b" class="">V = 120, S = 148</p><hr id="1ae445dd-d1f9-8001-9960-ca57650f05ac"/></div></div><p id="1ae445dd-d1f9-8041-b235-dfad92c88261" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
